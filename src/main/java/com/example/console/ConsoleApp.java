@@ -2,15 +2,19 @@ package com.example.console;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.example.console.beans.Playable;
+import com.example.console.beans.BlueRay;
+//import com.example.console.beans.Playable;
 
 public class ConsoleApp {
 
 	public static void main(String[] args) {
 		
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Playable blueRay = ctx.getBean("blueRay", Playable.class);
-		System.out.println("Current action: " + blueRay.play());
+		BlueRay blueRay = ctx.getBean("blueRay", BlueRay.class);
+		System.out.println("Your blueray brand is " + blueRay.getBrand() + " and reproduces " + blueRay.getTypeReproducer());
+		System.out.println("Turn on device: " + blueRay.turnOn());
+		System.out.println("Turn on bluetooth: " + blueRay.enableBluetooth(true));
+		System.out.println("Play movie: " + blueRay.play());
 		
 		ctx.close();
 

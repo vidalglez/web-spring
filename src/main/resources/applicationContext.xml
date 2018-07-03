@@ -17,6 +17,15 @@
     http://www.springframework.org/schema/util     
     http://www.springframework.org/schema/util/spring-util.xsd">
     
-    <bean id="blueRay" class="com.example.console.beans.BlueRay" />
+    <bean id="control" class="com.example.console.beans.RemoteControl" />
+    
+    <bean id="bluetooth" class="com.example.console.beans.Bluetooth" />
+    
+    <bean id="blueRay" class="com.example.console.beans.BlueRay" >
+    		<constructor-arg ref="control" />
+    		<property name="bluetoothSystem" ref="bluetooth" />
+    		<property name="brand" value="Samsung" />
+    		<property name="typeReproducer" value="4K" />
+    </bean>
     
 </beans>
