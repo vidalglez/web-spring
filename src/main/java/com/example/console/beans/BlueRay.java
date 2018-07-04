@@ -6,6 +6,7 @@ public class BlueRay implements Playable{
 	private Bluetooth bluetoothSystem;
 	private String brand;
 	private String typeReproducer;
+	private String operativeSystem;
 	
 	public BlueRay(RemoteControl control) {
 		this.control = control;
@@ -45,5 +46,13 @@ public class BlueRay implements Playable{
 
 	public void setTypeReproducer(String typeReproducer) {
 		this.typeReproducer = typeReproducer;
+	}
+
+	public String getOperativeSystem() {
+		return operativeSystem;
+	}
+
+	public void setOperativeSystem(String operativeSystem) {
+		this.operativeSystem = operativeSystem;
 	}
 }

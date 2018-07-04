@@ -17,6 +17,8 @@
     http://www.springframework.org/schema/util     
     http://www.springframework.org/schema/util/spring-util.xsd">
     
+    <context:property-placeholder location="classpath:data.properties" />
+    
     <bean id="control" class="com.example.console.beans.RemoteControl" />
     
     <bean id="bluetooth" class="com.example.console.beans.Bluetooth" />
@@ -26,6 +28,7 @@
     		<property name="bluetoothSystem" ref="bluetooth" />
     		<property name="brand" value="Samsung" />
     		<property name="typeReproducer" value="4K" />
+    		<property name="operativeSystem" value="${operative.system}" />
     </bean>
     
 </beans>
