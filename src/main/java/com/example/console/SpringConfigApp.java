@@ -1,14 +1,15 @@
 package com.example.console;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.example.inject.beans.ActionFigure;
+import com.example.spring.config.SpringConfig;
 
-public class AnnotationApp {
-
+public class SpringConfigApp {
+	
 	public static void main(String[] args) {
-		System.out.println("This console app is configured through XML thorugh context:component-scan xml tag in xml config file");
-		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+		System.out.println("This console app is configured through Java configuration, no XML involved");
+		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
 		
 		ActionFigure figure = ctx.getBean("figure", ActionFigure.class);
 		ActionFigure figure2 = ctx.getBean("figure", ActionFigure.class);
