@@ -1,11 +1,16 @@
 package com.example.inject.beans;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("figure")
+@Scope("prototype")
 public class ActionFigure {
 	
 	@Autowired
@@ -56,6 +61,16 @@ public class ActionFigure {
 	
 	public String plugItem() {
 		return plugItem.plug();
+	}
+	
+	@PostConstruct
+	public void initialize() {
+		System.out.println("This method is invoked after initialize bean");
+	}
+	
+	@PreDestroy
+	public void destroy() {
+		System.out.println("This method is invoked before destroy bean");
 	}
 
 }
