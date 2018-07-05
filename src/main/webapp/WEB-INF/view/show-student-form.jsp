@@ -20,8 +20,11 @@
 		</form:select>
 		<div></div>
 		<div> Choose your favorite programming language: 
-		<form:radiobuttons path="favoriteLanguage" items="${student.languagesOptions}" />
-		
+		<form:radiobuttons path="favoriteLanguage" items="${student.languagesOptions}" />		
+		</div>
+		<div>
+			Choose your favorite Operating System
+			<form:checkboxes items="${student.osOptions}" path="operatingSystems"/>
 		</div>
 		<input type="submit" value="Send"/>
 	</form:form>
