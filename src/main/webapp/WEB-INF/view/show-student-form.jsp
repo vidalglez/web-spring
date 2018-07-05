@@ -16,11 +16,13 @@
 		Last Name: <form:input path="lastName" />
 		<div></div>
 		<form:select path="country">
-			<form:option value="Germany">Germany</form:option>
-			<form:option value="France"></form:option>
-			<form:option value="Mexico"></form:option>
-			<form:option value="Denmark"></form:option>
+			<form:options items="${student.countryOptions}" />			
 		</form:select>
+		<div></div>
+		<div> Choose your favorite programming language: 
+		<form:radiobuttons path="favoriteLanguage" items="${student.languagesOptions}" />
+		
+		</div>
 		<input type="submit" value="Send"/>
 	</form:form>
 	<hr />

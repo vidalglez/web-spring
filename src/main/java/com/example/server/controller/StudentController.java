@@ -20,7 +20,8 @@ public class StudentController {
 	
 	@RequestMapping("/processForm")
 	public String processStudentForm(@ModelAttribute("student") Student student) {
-		System.out.println("Student data possibly to store in DB: " + student.getFirstName() + " " + student.getLastName());
+		System.out.println("Student data possibly to store in DB: " 
+				+ student.getFirstName() + " " + student.getLastName() + " " + student.getCountry() + " " + student.getFavoriteLanguage());
 		return "confirm-student";
 	}
 
