@@ -148,7 +148,7 @@
 				<version>2.2</version>
 				<configuration>
 					<path>/${project.build.finalName}</path>
-					<port>8080</port>
+					<port>8082</port>
 					<contextFile>src/main/webapp/META-INF/context.xml</contextFile>
 					<contextReloadable>true</contextReloadable>
 				</configuration>
