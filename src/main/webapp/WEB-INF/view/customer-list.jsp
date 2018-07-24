@@ -8,13 +8,11 @@
 <title>Customer List</title>
 <link type="text/css" rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/style.css">
-<link type="text/css" rel="stylesheet"
-	href="${pageContext.request.contextPath}/resources/css/add-customer-style.css">
 </head>
 <body>
 
-	<div class="wrapper">
-		<div class="header">
+	<div id="wrapper">
+		<div id="header">
 			<h2>CRM - Customer Relationship Mapping</h2>
 		</div>
 	</div>
@@ -40,6 +38,7 @@
 				</tbody>
 			</table>
 		</div>
+		<a href="${pageContext.request.contextPath}/">Go Back</a>
 	</div>
 </body>
 </html>

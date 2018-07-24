@@ -15,5 +15,9 @@
 	</form>
 	<hr />
 	<a href="student/showForm">Student section</a>
+	<div></div>
+	<a href="customer/list">Customers list</a>
+	<div></div>
+	<a href="student/list">Student list</a>
 </body>
 </html>
