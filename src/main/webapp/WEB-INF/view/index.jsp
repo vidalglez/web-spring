@@ -16,8 +16,8 @@
 	<hr />
 	<a href="student/showForm">Student section</a>
 	<div></div>
-	<a href="customer/list">Customers list</a>
+	<a href="customers/list">Customers list</a>
 	<div></div>
-	<a href="student/list">Student list</a>
+	<a href="students/list">Student list</a>
 </body>
 </html>

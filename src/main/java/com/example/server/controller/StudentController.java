@@ -12,7 +12,7 @@ import com.example.server.entity.Student;
 import com.example.server.rest.client.StudentClient;
 
 @Controller
-@RequestMapping("/student")
+@RequestMapping("/students")
 public class StudentController {
 	
 	@Autowired
@@ -39,7 +39,7 @@ public class StudentController {
 		return "students-list";
 	}
 	
-	@RequestMapping("/get-student")
+	@RequestMapping("/getstudent")
 	public String getStudent(HttpServletRequest request, Model model) {
 		Integer id = Integer.parseInt(request.getParameter("id"));
 		System.out.println("Getting data from student service client, id: " + id);
