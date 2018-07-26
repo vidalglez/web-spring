@@ -25,14 +25,19 @@
 						<th>First Name</th>
 						<th>Last Name</th>
 						<th>Email</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
 					<c:forEach var="customer" items="${customers}">
+						<c:url var="updateLink" value="/customers/showEditCustomerForm">
+							<c:param name="id" value="${customer.id}" />
+						</c:url>
 						<tr>
 							<td>${customer.firstName}</td>
 							<td>${customer.lastName}</td>
 							<td>${customer.email}</td>
+							<td><a href="${updateLink}">Edit</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

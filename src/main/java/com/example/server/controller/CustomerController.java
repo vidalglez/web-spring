@@ -38,6 +38,12 @@ public class CustomerController {
 		return "customer-form";
 	}
 	
+	@GetMapping("/showEditCustomerForm")
+	public String showEditForm(@RequestParam("id") Integer id, Model model) {
+		model.addAttribute("customer", customerClient.getCustomer(id));
+		return "customer-form";
+	}
+	
 	@PostMapping("/saveCustomer")
 	public String saveCustomer(@ModelAttribute("customer") Customer customer) {
 		int status = customerClient.saveCustomer(customer);
